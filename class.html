@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js</title>
+</head>
+<body>
+
+<script>
+	var house = function(length, width){
+		this.length = length;
+		this.width = width;
+		this.area = function(){
+			return this.length * this.width
+		}
+		this.perimeter = function(){
+			return 2*(this.length+this.width)
+		}
+		this.info = function(){
+			return "length = "+this.length+"<br /> width ="+this.width+"<br /> Area ="+this.area()+"<br /> perimeter"+this.perimeter();
+		}
+	};
+
+
+   var myHouse = new house(45, 63);
+      
+
+  var urHouse =  new house(78, 25); 
+  
+  document.write(myHouse.area());
+  document.write(urHouse.area());
+   
+
+
+</script>
+
+
+</body>
+</html>
